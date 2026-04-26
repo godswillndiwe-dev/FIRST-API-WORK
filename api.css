@@ -65,3 +65,24 @@ button:hover{
     border: 3px solid rgb(33, 110, 110);
 transition: ease-in-out 0.3s;
 }
+
+    /* MEDIA-QUERY-MOBILE */
+@media (max-width: 480px){
+    input{
+        width: 90%;
+        padding: 15px;
+    }
+
+    .pokey{
+        height: auto;
+        padding: 40px 10px;
+    }
+
+    .pokey-w h1{
+        font-size: 28px;
+    }
+
+    .pokey-w p{
+        font-size: 16px;
+    }
+}
