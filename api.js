@@ -7,32 +7,65 @@
 // .then(data => console.log(data))
 // .catch((error) => console.error( error));
 
-fetchData();
+// fetchData();
 
-async function fetchData() {
+// async function fetchData() {
 
-    try {
-const pokemonName = document.getElementById("pokemonName").value.toLowerCase();
-
-
-
-const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
-if (!response.ok) {
-    throw new Error("Network response was not ok");
-}
-const data = await response.json();
-const pokemonImage = data.sprites.front_default;
-const imgElement = document.getElementById("pokemonImage");
-imgElement.src = pokemonImage;
-imgElement.style.display = "block";
-imgElement.style.width = "200px";
+//     try {
+// const pokemonName = document.getElementById("pokemonName").value.toLowerCase();
 
 
-    }
+
+// const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
+// if (!response.ok) {
+//     throw new Error("Network response was not ok");
+// }
+// const data = await response.json();
+// const pokemonImage = data.sprites.front_default;
+// const imgElement = document.getElementById("pokemonImage");
+// imgElement.src = pokemonImage;
+// imgElement.style.display = "block";
+// imgElement.style.width = "200px";
 
 
-        catch (error) {
-console.error(error);
-}
+//     }
 
-}
+
+//         catch (error) {
+// console.error(error);
+// }
+
+// }
+
+
+// API:   
+
+
+// const btn = document.getElementById 
+// ("btn");
+// const output = document.getElementById 
+// ("output");
+
+// btn.addEventListener("click", function () {
+//     fetch("https://api.adviceslip.com/advice")
+//     .then((res) => res.json())
+//     .then((data) => {
+//         output.textContent = data.slip.advice;
+//     });
+// });
+
+
+const btn = document.getElementById("btn");
+const setup = document.getElementById("setup");
+const punchline = document.getElementById("punchline");
+
+btn.addEventListener("click", function () {
+
+    fetch("https://official-joke-api.appspot.com/random_joke")
+    .then(res => res.json())
+    .then(data => {
+        setup.textContent = data.setup;
+        punchline.textContent = data.punchline;
+    });
+
+});

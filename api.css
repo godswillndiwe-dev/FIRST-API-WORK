@@ -1,4 +1,4 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -67,7 +67,7 @@ transition: ease-in-out 0.3s;
 }
 
     /* MEDIA-QUERY-MOBILE */
-@media (max-width: 480px){
+/* @media (max-width: 480px){
     input{
         width: 90%;
         padding: 15px;
@@ -84,5 +84,81 @@ transition: ease-in-out 0.3s;
 
     .pokey-w p{
         font-size: 16px;
+    }
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body{
+    height: 100vh;
+    background: linear-gradient(135deg, #1E3A8A, #0f172a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* CONTAINER */
+.container{
+    background: white;
+    padding: 30px 25px;
+    border-radius: 15px;
+    text-align: center;
+    width: 400px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* TITLE */
+.container h1{
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+/* BUTTON */
+button{
+    margin-top: 15px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #1E3A8A;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #0f172a;
+}
+
+/* JOKE TEXT */
+#setup{
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+#punchline{
+    margin-top: 10px;
+    font-weight: bold;
+    color: #1E3A8A;
+}
+
+
+@media (max-width: 480px){
+    .container{
+        width: 90%;
+        padding: 20px;
+    }
+
+    .container h1{
+        font-size: 20px;
+    }
+
+    button{
+        width: 100%;
     }
 }
